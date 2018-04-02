@@ -106,7 +106,9 @@
 
   <div id="PageContainer" class="page-container">
 
-    {% section 'header' %}
+    {% unless template.name == "index" %}
+      {% section 'header' %}
+    {% endunless %}  
 
     {% if template.name == "index" %}
       {% section 'slideshow' %}
@@ -121,11 +123,7 @@
         </div>
       {% endunless %}
     </main>
-
-    <hr class="hr--large">
-
-    {% section 'footer' %}
-
+    
   </div>
 
   {% comment %}
