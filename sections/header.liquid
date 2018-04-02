@@ -73,8 +73,7 @@
 
         {% endif %}
       {% endif %}
-      <div class="secondary-nav">
-        
+      <div class="secondary-nav medium-down--hide">
         <ul>
           {% if settings.social_facebook_link != blank %}
             <li class="site-nav__item site-nav__expanded-item site-nav__item--compressed">
@@ -318,21 +317,21 @@
                     {% endif %}
 
                     {% if section.settings.logo-inverted and template.name == 'index' %}
-                      <a href="/" itemprop="url" class="site-header__logo-link">
+                      <a href="/pages/home" itemprop="url" class="site-header__logo-link">
                         <img src="{{ section.settings.logo-inverted | img_url: image_size }}"
                         srcset="{{ section.settings.logo-inverted | img_url: image_size }} 1x, {{ section.settings.logo-inverted | img_url: image_size, scale: 2 }} 2x"
                         alt="{{ section.settings.logo-inverted.alt | default: shop.name }}"
                         itemprop="logo">
                       </a>
                     {% elsif section.settings.logo %}
-                      <a href="/" itemprop="url" class="site-header__logo-link">
+                      <a href="/pages/home" itemprop="url" class="site-header__logo-link">
                           <img src="{{ section.settings.logo | img_url: image_size }}"
                           srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
                           alt="{{ section.settings.logo.alt | default: shop.name }}"
                           itemprop="logo">
                       </a>
                     {% else %}
-                      <a href="/" itemprop="url">{{ shop.name }}</a>
+                      <a href="/pages/home" itemprop="url">{{ shop.name }}</a>
                     {% endif %}
                   {% if template.name == 'index' %}
                     </h1>
@@ -340,7 +339,7 @@
                     </div>
                   {% endif %}
                 <!-- begin right site-nav -->
-                {% for link in linklists[section.settings.main_menu_link_list].links limit:2 %}
+                {% for link in linklists[section.settings.main_menu_link_list].links limit:2 offset:2 %}
                   {% if link.links != blank %}
                   {% assign parent_index = forloop.index %}
                     <li
@@ -433,7 +432,7 @@
               </ul>
               <!-- //site-nav -->
             </nav>
-            <div class="grid__item large--hide one-quarter">
+            <div class="grid__item large--hide one-quarter mobile-cart-wrapper">
               <div class="site-nav--mobile text-right">
                 <a href="/cart" class="site-nav__link cart-link js-drawer-open-button-right" aria-controls="CartDrawer">
                   <span class="icon-fallback-text">

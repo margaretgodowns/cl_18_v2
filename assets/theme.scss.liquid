@@ -4214,21 +4214,41 @@ $clPink: #ef7069;
 $clGray: #4d4c4c;
 
 // Header
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  .site-nav__item {
+    padding: 0 25px;
+  }
+}
+
 .secondary-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $clGreen;
+  
   ul {
     display: flex;
     align-items: center;
     margin-bottom: 0;
   }
+  
   .site-nav__link {
     font-size: .8em;
     padding: 10px;
     color: #ffffff;
   }
+}
+
+.burger-icon {
+  background-color: $clPink;
+}
+
+.mobile-cart-wrapper {
+  float: right !important;
 }
 
 // Landing Page
