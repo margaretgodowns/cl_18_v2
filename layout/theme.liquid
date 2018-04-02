@@ -114,15 +114,17 @@
       {% section 'slideshow' %}
     {% endif %}
 
-    <main class="main-content" role="main">
-      {% unless template.name == "index" or template == "collection.image" %}
-        <div class="wrapper">
-      {% endunless %}
-        {{ content_for_layout }}
-      {% unless template.name == "index" or template == "collection.image" %}
-        </div>
-      {% endunless %}
-    </main>
+    {% unless template.name == "index" %}
+      <main class="main-content" role="main">
+        {% unless template.name == "index" or template == "collection.image" %}
+          <div class="wrapper">
+        {% endunless %}
+          {{ content_for_layout }}
+        {% unless template.name == "index" or template == "collection.image" %}
+          </div>
+        {% endunless %}
+      </main>
+    {% endunless %}  
     
   </div>
 

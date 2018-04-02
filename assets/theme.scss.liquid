@@ -4207,3 +4207,35 @@ button.mfp-arrow {
   }
 }
 
+/*================ Charlotte Lucas 18 Custom Styles ================*/
+// Landing Page
+.template-index {
+  .slick-slider {
+    margin-bottom: 0;
+  }
+
+  .hero__text-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+
+    img {
+      width: 75%;
+      padding: 25px;
+      @include at-query($max, $small) {
+        width: 100%;
+      }
+    }
+
+    .btn {
+      font-size: 1.5em;
+      @include transition(font-size 0.2s ease-out);
+      
+      &:hover {
+        font-size: 1.6em;
+      }
+    }
+  }
+}

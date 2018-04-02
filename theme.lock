@@ -36,7 +36,7 @@ assets/respond.min.js:
 assets/theme.js.liquid:
   development: 2018-03-30T15:20:26-04:00   df09ca24c23616826e2315159c373ae9
 assets/theme.scss.liquid:
-  development: 2018-03-30T15:20:26-04:00   b6cef3c16ff5a9952735fc0405f705cc
+  development: 2018-04-02T16:55:58-04:00   aab18b4b56cd306ffa4d691e05f15957
 assets/timber.scss.liquid:
   development: 2018-03-30T15:20:26-04:00   e42231c74a499de9a3d37328b850a416
 config/settings_data.json:
@@ -46,7 +46,7 @@ config/settings_schema.json:
 layout/password.liquid:
   development: 2018-03-30T15:20:26-04:00   e3df81a186a3aaf1710cfc32ef51a558
 layout/theme.liquid:
-  development: 2018-04-01T20:10:50-04:00   c020fdaec5405f285caca79038d467fc
+  development: 2018-04-02T16:54:26-04:00   28b7817d0be791b798734607b7d5bc67
 locales/de.json:
   development: 2018-03-30T15:20:26-04:00   09cf9a7ff0052d8691dfff54ced866c5
 locales/en.default.json:
@@ -104,7 +104,7 @@ sections/password-header.liquid:
 sections/product-template.liquid:
   development: 2018-03-30T15:20:24-04:00   03e24a51bab259534b94d9ae2fb2dcb9
 sections/slideshow.liquid:
-  development: 2018-04-01T20:15:06-04:00   48d7d99a0c7baa5131515c6bd6d54d46
+  development: 2018-04-02T16:46:00-04:00   2c43e1d3822b4ccd01fc9c17a7728b73
 snippets/ajax-cart-template.liquid:
   development: 2018-03-30T15:20:27-04:00   a12ad20ccc9ef7b2516fe7941c51dba8
 snippets/bgset.liquid:
