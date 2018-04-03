@@ -4270,7 +4270,9 @@ $clGray: #4d4c4c;
 }
 
 .icon-cart {
-  color: $clGray;
+  @include at-query($max, $small) {
+    color: $clGray;
+  }
 }
 
 .mobile-cart-wrapper {
