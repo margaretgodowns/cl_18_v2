@@ -2821,7 +2821,7 @@ $slick-opacity-not-active: 0.25;
   &:hover > a,
   > a.nav-focus,
   &.nav-hover > a {
-    color: $colorNavText;
+    color: #ef7069;
     background-color: $colorNav;
     opacity: 1;
     @include transition(none);
@@ -2895,7 +2895,7 @@ $slick-opacity-not-active: 0.25;
 .site-nav__dropdown a,
 .site-nav__grandchild-dropdown a {
   background-color: transparent;
-  color: $colorTextBody;
+  color: #ef7069;
 
   &:hover,
   &:active,
@@ -4213,7 +4213,11 @@ $clGreen: #9d903d;
 $clPink: #ef7069;
 $clGray: #4d4c4c;
 
-// Header
+// Layout
+.main-content {
+  padding-top: 0;
+}
+
 .site-nav {
   display: flex;
   justify-content: space-between;
@@ -4221,6 +4225,12 @@ $clGray: #4d4c4c;
   
   .site-nav__item {
     padding: 0 25px;
+
+    &:hover {
+      .site-nav__link {
+        color: $clPink;
+      }
+    }
   }
 }
 
@@ -4243,8 +4253,24 @@ $clGray: #4d4c4c;
   }
 }
 
+.site-header {
+  padding: 30px 0;
+  border-bottom: 3px solid $clGreen;
+  @include at-query($max, $small) {
+    padding: 0;
+  }
+
+  .site-nav__link {
+    color: $clGreen;
+  }
+}  
+
 .burger-icon {
   background-color: $clPink;
+}
+
+.icon-cart {
+  color: $clGray;
 }
 
 .mobile-cart-wrapper {
@@ -4252,7 +4278,8 @@ $clGray: #4d4c4c;
 }
 
 // Landing Page
-.template-index {
+.template-index,
+#shopify-section-slideshow-home {
   .slick-slider {
     margin-bottom: 0;
   }
@@ -4281,4 +4308,14 @@ $clGray: #4d4c4c;
       }
     }
   }
+}
+
+// Home
+.hero__header {
+  opacity: 1;
+  position: static;
+}
+
+#home .main-content {
+  padding-bottom: 0;
 }
