@@ -4402,6 +4402,9 @@ h1 {
 
   .slick-slider .slick-dots {
     bottom: 28%;
+    @include at-query($max, $small) {
+      bottom: 15%;
+    }
   }
 }
 
@@ -4438,6 +4441,9 @@ h1 {
     color: $clGray;
     letter-spacing: .3em;
     text-transform: uppercase;
+    @include at-query($max, $small) {
+      margin: 0;
+    }
   }
 }
 
