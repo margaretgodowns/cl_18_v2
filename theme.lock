@@ -38,7 +38,7 @@ assets/respond.min.js:
 assets/theme.js.liquid:
   development: 2018-04-03T17:58:48-04:00   156deada05ef1eae77796be2cb537d6b
 assets/theme.scss.liquid:
-  development: 2018-04-03T18:55:10-04:00   7106b51a8267efe6a46193d7803b8d42
+  development: 2018-04-04T17:32:08-04:00   77f80026efb014e843dcde2c32d70961
 assets/timber.scss.liquid:
   development: 2018-03-30T15:20:26-04:00   e42231c74a499de9a3d37328b850a416
 config/settings_data.json:
@@ -198,7 +198,7 @@ templates/page.full-width.liquid:
 templates/page.home.liquid:
   development: 2018-04-02T19:34:37-04:00   387257f63bac30ae07f2aaa97804c62c
 templates/page.liquid:
-  development: 2018-03-30T15:20:29-04:00   3c1c3fb627419cc73d4cd19b32898d5e
+  development: 2018-04-04T17:28:21-04:00   3c1c3fb627419cc73d4cd19b32898d5e
 templates/page.portfolio.liquid:
   development: 2018-04-03T17:19:22-04:00   080b3f3060cd1c8160771bf4ad5c5186
 templates/page.press.liquid:

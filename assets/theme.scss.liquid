@@ -4267,7 +4267,7 @@ h1 {
 }
 
 .site-header {
-  padding: 30px 0;
+  padding: 20px 0;
   border-bottom: 3px solid $clGreen;
   @include at-query($max, $small) {
     padding: 0;
@@ -4452,28 +4452,40 @@ h1 {
   padding-bottom: 20px;
   .about-content {
     font-size: 14px;
-    font-family: 'Proxima_Nova_Reg';
     color: $clGray;
     text-transform: none;
   }
+  hr {
+    border-color: $clGray;
+    border-width: 2px 0 0 0;
+    margin: 15px 0 30px 0;
+  }
+
   h4, h5, p, a {
-    font-family: 'Proxima_Nova_Reg';
     color: $clGray;
   }
+
   h4 {
     font-size: 34px;
     margin-bottom: 1px;
     letter-spacing: .2em;
   }
+
   h5 {
     font-size: 20px;
     margin-bottom: 0;
   }
+
   p {
     font-size: 12px;
   }
+
   span {
     font-style: italic;
+  }
+
+  h1 {
+    margin-top: 25px;
   }
 }
 
@@ -4549,20 +4561,6 @@ h1 {
   padding: 10px;
   opacity: 0;
   @include transition(opacity 0.2s);
-  h3 {
-    font-family: 'Proxima_Nova_Sbold';
-  }
-  p {
-    font-family: 'Proxima_Nova_Reg';
-    font-style: italic;
-  }
-  a {
-    font-family: 'Proxima_Nova_Reg';
-    background-color: #282904;
-    color: #ffffff;
-    padding: 10px 30px;
-    font-style: normal;
-  }
   @include at-query($max, $small) {
     opacity: 1;
     font-size: 12px;
@@ -4572,6 +4570,17 @@ h1 {
     transform: none;
     top: auto;
     padding: 5px;
+  }
+
+  p {
+    font-style: italic;
+  }
+  
+  a {
+    background-color: #282904;
+    color: #ffffff;
+    padding: 10px 30px;
+    font-style: normal;
   }
 }
 
