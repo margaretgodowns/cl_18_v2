@@ -4267,6 +4267,10 @@ h1 {
   }
 }
 
+.secondary-nav-right {
+  margin-right: 20px;
+}
+
 .site-header {
   padding: 20px 0;
   border-bottom: 3px solid $clGreen;
@@ -4284,13 +4288,38 @@ h1 {
 }
 
 .icon-cart {
-  @include at-query($max, $small) {
+  @include at-query($max, $medium) {
     color: $clGray;
   }
 }
 
 .mobile-cart-wrapper {
   float: right !important;
+}
+
+.mobile-logo {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 40px;
+  @include at-query($max, $small) {
+    top: 20px;
+  }
+
+  img {
+    width: 200px;
+  }
+}
+
+.site-nav--mobile {
+  z-index: 100;
+  position: relative;
+}
+
+.mobile-social-nav {
+  margin-left: 0;
 }
 
 // Landing Page
@@ -4341,12 +4370,16 @@ h1 {
   padding-bottom: 0;
 }
 
+.hero-slideshow-home .slick-list .hero__slide .hero__image {
+  top: -100px;
+}
+
 // Portfolio
 #portfolio {
   .hero--full-height .hero__image {
     width: auto;
     margin: 0 auto;
-    max-height: 80vh;
+    max-height: 75vh;
   }
 
   .slick-prev:before, .slick-next:before {
@@ -4368,12 +4401,12 @@ h1 {
   }
 
   .slick-slider .slick-dots {
-    bottom: 22%;
+    bottom: 28%;
   }
 }
 
 #portfolio main {
-  max-height: 80vh;
+  max-height: 75vh;
 }
 
 #shopify-section-slideshow-portfolio {
@@ -4443,8 +4476,14 @@ h1 {
 }
 
 // Cart
-.template-cart h1 {
-  margin-top: 30px;
+.cart-link {
+  @include at-query($max, $small) {
+    margin-top: 5px;
+  }
+}
+
+.cart-link__bubble--visible {
+  background-color: $clPink;
 }
 
 // Press
@@ -4641,4 +4680,9 @@ h1 {
     width: 100%;
     order: 1;
   }
+}
+
+// Search
+.section-header {
+  margin-top: 30px;
 }

@@ -94,6 +94,11 @@
 
         {% endif %}
       {% endfor %}
+      <li class="mobile-nav__item">
+        <a href="mailto:charlottelharris@gmail.com">
+          Contact
+        </a>
+      </li>
       {% comment %}
         Spacer element
       {% endcomment %}
@@ -123,6 +128,78 @@
         <li class="mobile-nav__item mobile-nav__item--secondary"><a href="{{ link.url }}">{{ link.title }}</a></li>
       {% endfor %}
     </ul>
+    <ul class="mobile-social-nav">
+      {% if settings.social_facebook_link != blank %}
+        <li class="site-nav__item site-nav__expanded-item site-nav__item--compressed">
+          <a class="site-nav__link site-nav__link--icon" href="{{ settings.social_facebook_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Facebook' }}">
+            <span class="icon icon-facebook" aria-hidden="true"></span>
+          </a>
+        </li>
+      {% endif %}
+      {% if settings.social_twitter_link != blank %}
+        <li class="site-nav__item site-nav__expanded-item site-nav__item--compressed">
+          <a class="site-nav__link site-nav__link--icon" href="{{ settings.social_twitter_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Twitter' }}">
+            <span class="icon icon-twitter" aria-hidden="true"></span>
+          </a>
+        </li>
+      {% endif %}
+      {% if settings.social_pinterest_link != blank %}
+        <li class="site-nav__item site-nav__expanded-item site-nav__item--compressed">
+          <a class="site-nav__link site-nav__link--icon" href="{{ settings.social_pinterest_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Pinterest' }}">
+            <span class="icon icon-pinterest" aria-hidden="true"></span>
+          </a>
+        </li>
+      {% endif %}
+      {% if settings.social_instagram_link != blank %}
+        <li class="site-nav__item site-nav__expanded-item site-nav__item--compressed">
+          <a class="site-nav__link site-nav__link--icon" href="{{ settings.social_instagram_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Instagram' }}">
+            <span class="icon icon-instagram" aria-hidden="true"></span>
+          </a>
+        </li>
+      {% endif %}
+      {% if settings.social_snapchat_link != blank %}
+        <li class="site-nav__item site-nav__expanded-item site-nav__item--compressed">
+          <a class="site-nav__link site-nav__link--icon" href="{{ settings.social_snapchat_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Snapchat' }}">
+            <span class="icon icon-snapchat" aria-hidden="true"></span>
+          </a>
+        </li>
+      {% endif %}
+      {% if settings.social_google_plus_link != blank %}
+        <li class="site-nav__item site-nav__expanded-item site-nav__item--compressed">
+          <a class="site-nav__link site-nav__link--icon" href="{{ settings.social_google_plus_link | escape }}" rel="publisher" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Google Plus' }}">
+            <span class="icon icon-google_plus" aria-hidden="true"></span>
+          </a>
+        </li>
+      {% endif %}
+      {% if settings.social_tumblr_link != blank %}
+        <li class="site-nav__item site-nav__expanded-item site-nav__item--compressed">
+          <a class="site-nav__link site-nav__link--icon" href="{{ settings.social_tumblr_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Tumblr' }}">
+            <span class="icon icon-tumblr" aria-hidden="true"></span>
+          </a>
+        </li>
+      {% endif %}
+      {% if settings.social_youtube_link != blank %}
+        <li class="site-nav__item site-nav__expanded-item site-nav__item--compressed">
+          <a class="site-nav__link site-nav__link--icon" href="{{ settings.social_youtube_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'YouTube' }}">
+            <span class="icon icon-youtube" aria-hidden="true"></span>
+          </a>
+        </li>
+      {% endif %}
+      {% if settings.social_vimeo_link != blank %}
+        <li class="site-nav__item site-nav__expanded-item site-nav__item--compressed">
+          <a class="site-nav__link site-nav__link--icon" href="{{ settings.social_vimeo_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Vimeo' }}">
+            <span class="icon icon-vimeo" aria-hidden="true"></span>
+          </a>
+        </li>
+      {% endif %}
+      {% if settings.social_fancy_link != blank %}
+        <li class="site-nav__item site-nav__expanded-item site-nav__item--compressed">
+          <a class="site-nav__link site-nav__link--icon" href="{{ settings.social_fancy_link | escape }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Fancy' }}">
+            <span class="icon icon-fancy" aria-hidden="true"></span>
+          </a>
+        </li>
+      {% endif %}
+        </ul>
     <!-- //mobile-nav -->
   </div>
 </div>

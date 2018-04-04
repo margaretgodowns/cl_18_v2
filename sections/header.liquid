@@ -151,7 +151,7 @@
             </a>
           </li>
         </ul>
-        <ul>
+        <ul class="secondary-nav-right">
           {% if shop.customer_accounts_enabled %}
             <li class="site-nav__item site-nav__expanded-item site-nav__item--compressed">
               <a class="site-nav__link site-nav__link--icon" href="/account">
@@ -432,6 +432,45 @@
               </ul>
               <!-- //site-nav -->
             </nav>
+            <div class="mobile-logo large--hide">
+              {% comment %}
+                Use the uploaded logo from theme settings if enabled.
+                Site name gets precedence with H1 tag on homepage, div on other pages.
+              {% endcomment %}
+                {% if template.name == 'index' %}
+                  <h1 class="site-header__logo" itemscope itemtype="http://schema.org/Organization">
+                {% else %}
+                  <div class="site-header__logo" itemscope itemtype="http://schema.org/Organization">
+                {% endif %}
+                {% if section.settings.logo_max_width != blank %}
+                  {% capture image_size %}{{ section.settings.logo_max_width | escape }}x{% endcapture %}
+                {% else %}
+                  {% assign image_size = "180x" %}
+                {% endif %}
+
+                {% if section.settings.logo-inverted and template.name == 'index' %}
+                  
+                    <img src="{{ section.settings.logo-inverted | img_url: image_size }}"
+                    srcset="{{ section.settings.logo-inverted | img_url: image_size }} 1x, {{ section.settings.logo-inverted | img_url: image_size, scale: 2 }} 2x"
+                    alt="{{ section.settings.logo-inverted.alt | default: shop.name }}"
+                    itemprop="logo">
+                  
+                {% elsif section.settings.logo %}
+                  
+                      <img src="{{ section.settings.logo | img_url: image_size }}"
+                      srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+                      alt="{{ section.settings.logo.alt | default: shop.name }}"
+                      itemprop="logo">
+                  
+                {% else %}
+                  <a href="/pages/home" itemprop="url">{{ shop.name }}</a>
+                {% endif %}
+                {% if template.name == 'index' %}
+                  </h1>
+                {% else %}
+                  </div>
+                {% endif %}
+            </div>
             <div class="grid__item large--hide one-quarter mobile-cart-wrapper">
               <div class="site-nav--mobile text-right">
                 <a href="/cart" class="site-nav__link cart-link js-drawer-open-button-right" aria-controls="CartDrawer">
