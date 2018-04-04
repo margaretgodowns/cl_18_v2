@@ -1,0 +1,15 @@
+<img src="{{ section.settings.image-about | img_url: '2000', crop: 'bottom' }}" alt="{{ section.settings.image-about.alt | default: shop.name }}" >
+
+{% schema %}
+  {
+    "name": "About Image",
+    "class": "image-about",
+    "settings": [
+      {
+      	"type": "image_picker",
+        "id": "image-about",
+        "label": "About Image"
+      }
+    ]
+  }
+{% endschema %}

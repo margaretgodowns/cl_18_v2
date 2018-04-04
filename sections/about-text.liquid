@@ -1,0 +1,17 @@
+<h1>About</h1>
+<hr />
+{{ section.settings.about-text }}
+
+{% schema %}
+  {
+    "name": "Text",
+    "class": "about-text",
+    "settings": [
+      {
+      	"type": "textarea",
+        "id": "about-text",
+        "label": "Text"
+      }
+    ]
+  }
+{% endschema %}

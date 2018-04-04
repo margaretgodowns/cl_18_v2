@@ -290,6 +290,7 @@ $max: max-width;
 $viewportIncrement: 1px;
 $siteWidth: 1050px;
 $small: 590px;
+$smallMedium: 720px;
 $medium: 768px;
 $large: 769px;
 $xlarge: $siteWidth + $viewportIncrement;
@@ -4595,5 +4596,49 @@ h1 {
     img {
       opacity: .8;
     }
+  }
+}
+
+// About
+#shopify-section-about-hero-image {
+  img {
+    width: 100%;
+  }
+}
+
+.image-about {
+  text-align: center;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-item-right,
+.about-item-left {
+  padding: 20px;
+}
+
+.about-item-right {
+  width: 50%;
+  @include at-query($max, $medium) {
+    width: 50%;
+  }
+  @include at-query($max, $smallMedium) {
+    width: 100%;
+  }
+}
+
+.about-item-left {
+  width: 50%;
+  @include at-query($max, $medium) {
+    width: 50%;
+  }
+  @include at-query($max, $smallMedium) {
+    width: 100%;
+    order: 1;
   }
 }
