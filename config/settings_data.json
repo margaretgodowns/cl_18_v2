@@ -19,12 +19,12 @@
     "type_header_family": "Google_Montserrat_400_sans",
     "type_header_base_size": "38px",
     "type_header_border_thickness": "1px",
-    "type_accent_family": "Google_Roboto_400_sans",
+    "type_accent_family": "Google_Montserrat_400_sans",
     "type_accent_transform": true,
     "type_accent_spacing": true,
     "type_accent_subheadings": false,
-    "type_base_family": "Google_Source+Sans+Pro_400_sans",
-    "type_base_size": "17px",
+    "type_base_family": "Google_Lora_400_serif",
+    "type_base_size": "14px",
     "type_base_italize_titles": false,
     "cart_type": "page",
     "cart_notes_enable": true,
@@ -74,10 +74,10 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/CLI_218-6.jpg",
               "color_image_overlay": "#3d4246",
-              "image_overlay_opacity": 25,
+              "image_overlay_opacity": 15,
               "slide_subheading": "",
               "slide_heading": "",
-              "slide_cta": "Click to Enter",
+              "slide_cta": "Click to enter",
               "slide_link": "shopify:\/\/pages\/home"
             }
           }
@@ -89,14 +89,13 @@
           "hero_home_auto": false,
           "home_hero_auto_speed": "5000",
           "slide_text_color": "#ffffff",
-          "slide_button_label_color": "#000000",
-          "slide_button_background_color": "#ffffff"
+          "slide_button_label_color": "#ffffff"
         }
       },
       "drawer-menu": {
         "type": "drawer-menu",
         "settings": {
-          "drawer_top_link_list": "main-menu",
+          "drawer_top_link_list": "drawer-menu",
           "drawer_bottom_link_list": "footer",
           "drawer_search_enable": false
         }
@@ -142,6 +141,32 @@
           "quantity_enabled": false,
           "product_selector": "radio",
           "add_to_cart_button_size": "small"
+        }
+      },
+      "slideshow-home": {
+        "type": "slideshow-home",
+        "blocks": {
+          "1522710875358": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1_Kiawah_Family_Room.png",
+              "color_image_overlay": "#3d4246",
+              "image_overlay_opacity": 0,
+              "slide_subheading": "",
+              "slide_heading": "",
+              "slide_cta": "",
+              "slide_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1522710875358"
+        ],
+        "settings": {
+          "hero_home_auto": true,
+          "home_hero_auto_speed": "5000",
+          "slide_text_color": "#ffffff",
+          "slide_button_label_color": "#000000"
         }
       }
     },

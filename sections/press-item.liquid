@@ -1,0 +1,51 @@
+<h1>Press</h1>
+<hr />
+<div class="grid">
+  {% for block in section.blocks %}
+    <div class="grid__item large--one-sixth small--one-half one-half">
+      <a href="{{ block.settings.press-item-link }}">
+      <div class="press-item">
+          <img src="{{ block.settings.press-item-image | img_url: '400x400' }}" />
+          <p class="press-content">
+            {{ block.settings.press-item-title }}<br/>
+            <span>{{ block.settings.press-item-date }}</span>
+          </p>
+      </div>
+      </a>  
+    </div>
+{% endfor %}
+</div>
+{% schema %}
+  {
+    "name": "Press",
+    "max_blocks": 16,
+    "blocks" : [
+      {
+        "type": "text",
+        "name": "Press Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "press-item-title",
+            "label": "Title"
+          },
+          {
+            "type": "url",
+            "id": "press-item-link",
+            "label": "Link"
+          },
+          {
+            "type": "text",
+            "id": "press-item-date",
+            "label": "Date"
+          },
+          {
+	          "type": "image_picker",
+		        "id": "press-item-image",
+		        "label": "Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
